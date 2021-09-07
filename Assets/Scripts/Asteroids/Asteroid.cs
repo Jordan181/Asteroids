@@ -16,9 +16,9 @@ public class Asteroid : MonoBehaviour
 
     private static readonly IReadOnlyDictionary<AsteroidSize, int> TotalAsteroidScoreValues = new Dictionary<AsteroidSize, int>
     {
-        {AsteroidSize.Small, 80},
-        {AsteroidSize.Medium, 30},
-        {AsteroidSize.Large, 10}
+        {AsteroidSize.Small, AsteroidScoreValues[AsteroidSize.Small]},
+        {AsteroidSize.Medium, AsteroidScoreValues[AsteroidSize.Small] + AsteroidScoreValues[AsteroidSize.Medium]},
+        {AsteroidSize.Large, AsteroidScoreValues[AsteroidSize.Small] + AsteroidScoreValues[AsteroidSize.Medium] + AsteroidScoreValues[AsteroidSize.Large]}
     };
 
     #endregion
